@@ -1,0 +1,25 @@
+body {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.konteiner {
+    display: flex;
+    width: 90%;
+    background-color: white;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.blokk {
+    width: 150px;
+    height: 150px;
+    background-color: orangered;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
