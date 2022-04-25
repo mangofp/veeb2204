@@ -1,0 +1,56 @@
+body {
+    background-color: aqua;
+    color: white;
+}
+
+.tahvel, .arvuti {
+    display: none;
+}
+
+.konteiner img {
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background-color: coral;
+    }
+    h2 {
+        text-transform: uppercase;
+    }
+
+    .tahvel {
+        display: block;
+    }
+
+    .mobiil {
+        display: none;
+    }
+
+    .konteiner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .konteiner img {
+        width: 50%;
+    }
+} 
+
+@media screen and (min-width: 1000px) {
+    body {
+        background-color: blue;
+    }
+
+    .arvuti {
+        display: block;
+    }
+
+    .tahvel {
+        display: none;
+    }
+
+    .konteiner img {
+        width: 33%;
+    }
+}
