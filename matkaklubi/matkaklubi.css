@@ -1,0 +1,32 @@
+body {
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.paisSektsioon {
+    width: 100%;
+    height: 778px;
+    background-image: url('./assets/Hills.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.paisLogo {
+    width: 66px;
+    height: 64px;
+}
+
+.paisNimi {
+    font-size: 33px;
+    font-weight: 800;
+    letter-spacing: 0px;
+    color: #0B0B0B;
+    width: 126px;
+    line-height: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+    .paisSektsioon {
+        background-image: url('./assets/Hills@2x.png');
+    }
+}

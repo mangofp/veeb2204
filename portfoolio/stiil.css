@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+/*
+Üldised elemendid
+*/
+
+body {
+    background-color: maroon;
+}
+
+h1 {
+    color: green;
+}
+
+.tablet, .desktop {
+    display: none;
+}
+
+.blokk {
+    width: 100%;
+}
+
+.blokk img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.konteiner {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background-color: mediumaquamarine;
+    }
+    .tablet {
+        display: block;
+    }
+
+    .mobiil {
+        display: none;
+    }
+
+    .konteiner {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .blokk {
+        width: 50%;
+        padding-left: 5px
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        background-color: blanchedalmond;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .blokk {
+        width: 33.33%;
+    }
+}
