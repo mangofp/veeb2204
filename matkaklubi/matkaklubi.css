@@ -25,6 +25,80 @@ body {
     line-height: 30px;
 }
 
+.pais-menyy {
+    font-family: 'Montserrat', sans-serif;
+	font-size: 16.67px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2.67px;
+    margin-left: auto
+}
+
+.pais-menyy ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.pais-menyy li {
+    padding: 0px;
+    margin-left: 10px;
+    min-width: 100px;
+}
+
+.pais-menyy a {
+    color: #0B0B0B;
+}
+
+.matkajapilt {
+    display: none;
+}
+
+.rida {
+    display: flex;
+    width: 100%;
+}
+
+.paisSektsioon-pealkirjad {
+    padding-top: 200px;
+}
+
+.paisSektsioon h1, .paisSektsioon h2, .paisSektsioon h3 {
+    letter-spacing: 0px;
+    color: #0B0B0B;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.paisSektsioon h2 {
+    font-size: 39.57px;
+    line-height: 48px;
+}
+.paisSektsioon h1 {
+    font-size: 74.39px;
+    line-height: 91px;
+}
+.paisSektsioon h3 {
+    font-size: 20.83px;
+    line-height: 29.17px;
+}
+
+
+.liblikas1 {
+    margin-top: -45px;
+    width: 75px;
+    height: 66px;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .matkajapilt {
+        display: block;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .paisSektsioon {
         background-image: url('./assets/Hills@2x.png');
