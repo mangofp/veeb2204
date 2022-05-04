@@ -15,6 +15,10 @@ if (kasutajaNimi === "Kalle" || kasutajaNimi === "Malle" ) {
     for (let index = 0; index < kasutajaNimi.length; index++ ) {
         tervitusElement.innerHTML += `<div>Täht nr ${index} : ${kasutajaNimi[index]}</div>`
     }
+    tervitusElement.innerHTML += `<h2>Tähed sinu nimes tagurpidi:</h2>`
+    for (let index = kasutajaNimi.length-1; index >= 0; index = index - 1 ) {
+        tervitusElement.innerHTML += `<div>Täht nr ${index} : ${kasutajaNimi[index]}</div>`
+    }
 }
 
 
