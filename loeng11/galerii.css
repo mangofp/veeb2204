@@ -1,0 +1,8 @@
+#galerii {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#galerii img {
+    width: 40%;
+}
