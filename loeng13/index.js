@@ -31,3 +31,14 @@ const ylesandedElement = document.getElementById('ylesanded')
 for (let i = 0; i < ylesanded.length; i++) {
    ylesandedElement.innerHTML += tagastaYlesanneHtml(i)
 }
+
+//funktsioon ülesande andmete lugemiseks ja massiivi lisamiseks
+function lisaYlesanne() {
+    const ylesanne = document.getElementById('kirjeldus')
+    const tahtaeg = document.getElementById('aeg')
+    const uusYlesanne = {kirjeldus: ylesanne.value, kasTehtud: false, tahtsus: 8, tahtaeg: tahtaeg.value }
+    ylesanded.push(uusYlesanne)
+    ylesandedElement.innerHTML += tagastaYlesanneHtml(ylesanded.length - 1) 
+    ylesanne.value = ''
+    tahtaeg.value = ''
+}
