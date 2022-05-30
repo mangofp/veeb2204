@@ -1,10 +1,14 @@
 
 let ylesanne1 = {kirjeldus: 'tee hommikuvõimlemist', kasTehtud: true, tahtsus: 8, tahtaeg: 'enne kella 8-t'}
-let ylesanne2 = {kirjeldus: 'jaluta koeraga', kasTehtud: false, tahtsus: 8, tahtaeg: 'enne kella 8-t'}
+let ylesanne2 = {kirjeldus: 'jaluta koeraga', kasTehtud: true, tahtsus: 8, tahtaeg: 'enne kella 8-t'}
 console.log(ylesanne1)
 
 //koonda ylesanded massiivi
-let ylesanded = [ylesanne1, ylesanne2]
+let ylesanded = [
+    ylesanne1, 
+    ylesanne2,
+    {kirjeldus: 'mine tööle', kasTehtud: false, tahtsus: 8, tahtaeg: 'enne kella 9-t'}
+]
 
 ylesanded.push({kirjeldus: 'tee hommikusöök', kasTehtud: false, tahtsus: 8, tahtaeg: 'enne kella 8-t'})
 
@@ -12,14 +16,20 @@ ylesanded.push({kirjeldus: 'tee hommikusöök', kasTehtud: false, tahtsus: 8, ta
 function tagastaYlesanneHtml(index) {
     let tehtud = ''
     let tehtudKlass = ''
+    let tahtisKlass = ''
     if (ylesanded[index].kasTehtud) {
         tehtud = 'checked'
         tehtudKlass = 'class="tehtud"'
     }
+    if (ylesanded[index].tahtsus > 8) {
+        tahtisKlass = 'class="tahtis"'
+    }
     return `
     <div ${tehtudKlass}>
         <input type="checkbox" ${tehtud}>
-        Oluline ülesanne: ${ylesanded[index].kirjeldus} ${ylesanded[index].tahtaeg}
+        <span ${tahtisKlass}>
+            Oluline ülesanne: ${ylesanded[index].kirjeldus} ${ylesanded[index].tahtaeg} Tähtsus: ${ylesanded[index].tahtsus}
+        </span>
     </div>
     `
     //Ülemine template tagastab sarnase väärtuse:
@@ -36,7 +46,13 @@ for (let i = 0; i < ylesanded.length; i++) {
 function lisaYlesanne() {
     const ylesanne = document.getElementById('kirjeldus')
     const tahtaeg = document.getElementById('aeg')
-    const uusYlesanne = {kirjeldus: ylesanne.value, kasTehtud: false, tahtsus: 8, tahtaeg: tahtaeg.value }
+    const tahtsus = document.getElementById('tahtsus')
+    const uusYlesanne = {
+        kirjeldus: ylesanne.value, 
+        kasTehtud: false, 
+        tahtsus: parseInt(tahtsus.value), 
+        tahtaeg: tahtaeg.value 
+    }
     ylesanded.push(uusYlesanne)
     ylesandedElement.innerHTML += tagastaYlesanneHtml(ylesanded.length - 1) 
     ylesanne.value = ''
